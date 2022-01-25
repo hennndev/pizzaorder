@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
-import { apiRoute } from 'config/config'
+import { fetchAPI } from 'utils/utils'
 import Products from '@/components/Products/Products'
 
 const Menu = ({data}) => {
@@ -44,14 +44,13 @@ const Menu = ({data}) => {
 }
 
 export const getStaticProps = async() => {
-    const res = await fetch(`${apiRoute}/api/products`)
-    const data = await res.json()
+    const data = await fetchAPI('products')
 
     return {
         props: {
             data
         },
-        revalidate: 50
+        revalidate: 60
     }
 }
 

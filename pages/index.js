@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { apiRoute } from 'config/config'
+import { fetchAPI } from 'utils/utils'
 import Hero from '@/components/UI/Hero'
 import About from '@/components/UI/About'
 import Products from '@/components/Products/Products'
@@ -29,13 +29,12 @@ export default function Home({data}) {
 }
 
 export const getStaticProps = async() => {
-    const res = await fetch(`${apiRoute}/api/products`)
-    const data = await res.json()
+    const data = await fetchAPI('products')
 
     return {
         props: {
             data
         },
-        revalidate: 50
+        revalidate: 60
     }
 }
