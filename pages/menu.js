@@ -37,7 +37,7 @@ const Menu = ({data}) => {
                     <p className={`cty ${cty === 'burger' && 'border-none bg-primary text-white'}`} onClick={() => handleCty('burger')}>Burger</p>
                     <p className={`cty ${cty === 'drinks' && 'border-none bg-primary text-white'}`} onClick={() => handleCty('drinks')}>Drinks</p>
                 </div>
-                <Products data={data.data.filter(item => item.kategori === cty)}/>
+                <Products data={data?.data?.filter(item => item.kategori === cty)}/>
             </div>
         </>
     )

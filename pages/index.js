@@ -20,7 +20,7 @@ export default function Home({data}) {
                         <div className="flex-center">
                             <h1 className='text-center text-2xl md:text-3xl text-white tracking-wide font-bold mb-10 border-b-2 border-[#F47340] pb-3 w-max' data-aos='fade-up' data-aos-delay='300'>HOT <span className='primary-text'>PIZZA</span> MEALS</h1>
                         </div>
-                        <Products data={data.data}/>
+                        <Products data={data?.data}/>
                     </div>   
                 </div>
             </section>
