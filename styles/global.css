@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+    .container {
+        @apply max-w-6xl mx-auto
+    }
+    .flex-between {
+        @apply flex items-center justify-between
+    }
+    .flex-center {
+        @apply flex items-center justify-center
+    }
+    .bg-overlay {
+        @apply bg-[rgba(0,0,0,0.6)] w-full h-full absolute top-0 bottom-0 left-0 right-0 z-30
+    }
+    .header-link {
+        @apply hover:primary-text cursor-pointer text-sm font-medium
+    }
+    .btn {
+        @apply rounded cursor-pointer px-4 py-2 bg-primary hover:bg-[#EA5C2B] text-white transition duration-300
+    }
+    .btn-outline {
+        @apply border-2 border-white bg-transparent hover:border-transparent hover:bg-primary
+    }
+    .btn-loading {
+        @apply bg-gray-500 hover:bg-gray-500 cursor-not-allowed
+    }
+    .form-loading {
+        @apply absolute w-full h-full top-0 right-0 bottom-0 left-0 animate-pulse bg-gray-100 opacity-20
+    }
+    .input-control {
+        @apply flex flex-col mb-6
+    }
+    .form-label {
+        @apply text-gray-500  font-semibold
+    }
+    .form-input {
+        @apply outline-none text-gray-600 py-2 border-b border-gray-300 focus:border-orange-500 focus:border-b-2 text-[15px]
+    }
+    .text-error {
+        @apply text-red-500 mt-1
+    }
+    .primary-text {
+        @apply text-[#F47340]
+    }
+    .primary-color {
+        @apply text-[#F47340]
+    }
+    .bg-primary {
+        @apply bg-[#F47340]
+    }
+    .red-rounded {
+        @apply bg-red-500 rounded-full absolute h-[18px] w-[18px] flex-center text-center text-[10px] text-white -mt-2 -right-2
+    }
+    .cty {
+        @apply border border-[#F47340] py-2 px-4 primary-text cursor-pointer rounded hover:bg-[#F47340] hover:text-white transition duration-200
+    }
+}
