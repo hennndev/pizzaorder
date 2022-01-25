@@ -14,13 +14,13 @@ function MyApp({ Component, pageProps }) {
             delay: 50,
         });
     });
-  return (
-      <Provider>
-          <Layout>
-            <Component {...pageProps} />
-        </Layout>
-      </Provider>
-  )
+    return (
+        <Provider>
+            <Layout>
+                <Component {...pageProps} />
+            </Layout>
+        </Provider>
+    )
 }
 
 export default MyApp
