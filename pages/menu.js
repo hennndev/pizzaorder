@@ -15,7 +15,7 @@ const Menu = ({data}) => {
     return (
         <>
             <Head>
-                <title>Menu | O-Pizza</title>
+                <title>Menu | O`Pizza</title>
             </Head>
             <div className='relative h-[670px] w-full'>
                 <div className='bg-overlay flex-center flex-col text-white space-y-5'>
@@ -37,7 +37,7 @@ const Menu = ({data}) => {
                     <p className={`cty ${cty === 'burger' && 'border-none bg-primary text-white'}`} onClick={() => handleCty('burger')}>Burger</p>
                     <p className={`cty ${cty === 'drinks' && 'border-none bg-primary text-white'}`} onClick={() => handleCty('drinks')}>Drinks</p>
                 </div>
-                <Products data={data?.data?.filter(item => item.kategori === cty)}/>
+                <Products data={data?.data}/>
             </div>
         </>
     )
