@@ -15,7 +15,7 @@ const Menu = ({data}) => {
     return (
         <>
             <Head>
-                <title>Menu | 0`Pizza</title>
+                <title>Menu | O-Pizza</title>
             </Head>
             <div className='relative h-[670px] w-full'>
                 <div className='bg-overlay flex-center flex-col text-white space-y-5'>

@@ -8,7 +8,7 @@ export default function Home({data}) {
     return (
         <>
             <Head>
-                <title>Home | O`Pizza</title>
+                <title>Home | O-Pizza</title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
