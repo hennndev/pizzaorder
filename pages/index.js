@@ -29,7 +29,12 @@ export default function Home({data}) {
 }
 
 export const getStaticProps = async() => {
-    const data = await fetchAPI('products')
+    let data
+    try {
+        data = await fetchAPI('products')
+    } catch (error) {
+        data = []
+    }
 
     return {
         props: {

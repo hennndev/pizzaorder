@@ -12,6 +12,8 @@ const Menu = ({data}) => {
     const router = useRouter()
     const handleCty = (val) => setCty(val)
 
+    console.log(data)
+
     return (
         <>
             <Head>
@@ -44,7 +46,12 @@ const Menu = ({data}) => {
 }
 
 export const getStaticProps = async() => {
-    const data = await fetchAPI('products')
+    let data
+    try {
+        data = await fetchAPI('products')
+    } catch (error) {
+        data = []
+    }
 
     return {
         props: {
